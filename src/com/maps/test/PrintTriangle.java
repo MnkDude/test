@@ -15,9 +15,6 @@ Input : i=0,j=0
      */
     public static void main(String[] args) {
         int a[][] = {
-               /* {1, 2, 3},
-                {8, 6, 4},
-                {4, 5, 6}*/
                 {1, 2, 3, 5},
                 {8, 6, 4, 6},
                 {4, 5, 6, 7}
@@ -40,11 +37,6 @@ Input : i=0,j=0
                 }
             }
         }
-
-//        printTriangle(a, 0, 0, 2, 2);
-//        printTriangle(a, 0, 2, 2, 0);
-
-
     }
 
     static void printTriangle(int[][] matrix, int i1, int j1, int i2, int j2) {
