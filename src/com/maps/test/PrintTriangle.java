@@ -20,6 +20,24 @@ Input : i=0,j=0
                 {4, 5, 6, 7}
         };
 
+        /*
+        0,0
+        1,0 1,1
+
+        0,0
+        1,0 1,1
+        2,0 2,1 2,2
+
+        0,1
+        1,1 1,2
+
+        0,1
+        1,1 1,2
+        2,1 2,2 2,3
+         */
+
+        String result = "";
+
         for (int i = 0; i < a.length - 1; i++) {
             for (int j = 0; j < a[i].length - 1; j++) {
                 for (int k = 1; k < a.length; k++) {
@@ -53,7 +71,7 @@ Input : i=0,j=0
         } else {
             for (int i = i1, k = 0; i <= i2; i++, k++) {
                 for (int j = j1, l = 0; j >= j2; j--, l++) {
-                    System.out.print(" " + matrix[i][j]);
+                    System.out.print(matrix[i][j] + " ");
                     if (l == k) {
                         break;
                     }
