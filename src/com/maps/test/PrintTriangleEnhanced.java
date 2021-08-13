@@ -31,25 +31,23 @@ Input : i=0,j=0
         2,1 2,2 2,3
          */
 
-        String result = "";
-        String revResult = "";
+        String leftToRight = ""; // to Print Right to l
+        String rightToLeft = "";
         int i = 0, j = 0;
         int j1 = a[0].length - 1;
         while (i < a.length - 1) {
-            result = a[i][j] + "\n";
-            revResult = a[i][j1] + "\n";
+            leftToRight = a[i][j] + "\n";
+            rightToLeft = a[i][j1] + "\n";
             for (int k = 1; i + k < a.length && j + k < a[i].length; k++) {
-                result += getRow(a[i + k], j, j + k);
-                revResult += getRow(a[i + k], j1 - k, j1);
+                leftToRight += getRow(a[i + k], j, j + k);
+                rightToLeft += getRow(a[i + k], j1 - k, j1);
                 if (i + k < a.length - 1 && j + k < a[i].length - 1) {
-                    result += "\n\n" + result + "\n";
-                    revResult += "\n\n" + revResult + "\n";
+                    leftToRight += "\n\n" + leftToRight + "\n";
+                    rightToLeft += "\n\n" + rightToLeft + "\n";
                 }
             }
-            result += "\n";
-            revResult += "\n";
-            System.out.println(result);
-            System.out.println(revResult);
+            System.out.println(leftToRight+"\n");
+            System.out.println(rightToLeft+"\n");
             j++;
             j1--;
             if (j == a[i].length - 1 && j1 == 0) {
